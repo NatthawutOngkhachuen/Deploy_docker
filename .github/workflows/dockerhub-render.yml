@@ -32,5 +32,5 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-localstorage:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/simple-node-localstorage:${{ github.sha }}
 
-      #- name: Trigger Render deploy hook
-        #run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+      - name: Trigger Render deploy hook
+        run: curl https://api.render.com/deploy/srv-d87cl87avr4c73cbsp4g?key=FypUJflPjbM
