@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Notes</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Node.js + Browser Local Storage</p>
+        <h1>Local Notes</h1>
+        <p class="summary">Create small notes that stay in this browser using localStorage.</p>
+      </section>
+
+      <section class="panel">
+        <form id="note-form" class="note-form">
+          <label for="note-input">New note</label>
+          <div class="input-row">
+            <input id="note-input" type="text" maxlength="120" placeholder="Type something to remember..." autocomplete="off" />
+            <button type="submit">Add</button>
+          </div>
+        </form>
+
+        <div class="toolbar">
+          <p><span id="note-count">0</span> saved notes</p>
+          <button id="clear-button" type="button" class="ghost">Clear all</button>
+        </div>
+
+        <ul id="note-list" class="note-list"></ul>
+      </section>
+    </main>
+
+    <template id="note-template">
+      <li class="note-item">
+        <span class="note-text"></span>
+        <button type="button" class="delete-button" aria-label="Delete note">Delete</button>
+      </li>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
