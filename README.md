@@ -6,7 +6,7 @@ Simple Node.js + Express app for Render deployment. The browser stores notes in 
 
 ```bash
 npm install
-npm run dev
+npm run dev 
 ```
 
 Open:
